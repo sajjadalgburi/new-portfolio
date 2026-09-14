@@ -240,21 +240,6 @@ export const DATA = {
       ],
     },
     {
-      title: "Promptopia",
-      dates: "July - August 2024",
-      location: "Toronto, Ontario",
-      description:
-        "A platform for discovering and sharing AI prompts, built with Next.js, TypeScript, MongoDB, and serverless functions.",
-      image: "/promptopia.svg",
-      links: [
-        {
-          title: "GitHub",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/Sajjadalgburi/promptopia",
-        },
-      ],
-    },
-    {
       title: "Code Threads",
       dates: "September 2024",
       location: "Remote",
@@ -270,6 +255,21 @@ export const DATA = {
       ],
     },
     {
+      title: "Promptopia",
+      dates: "July - August 2024",
+      location: "Toronto, Ontario",
+      description:
+        "A platform for discovering and sharing AI prompts, built with Next.js, TypeScript, MongoDB, and serverless functions.",
+      image: "/promptopia.svg",
+      links: [
+        {
+          title: "GitHub",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/Sajjadalgburi/promptopia",
+        },
+      ],
+    },
+    {
       title: "Cool Games",
       dates: "May - June 2024",
       location: "Toronto, Ontario",
@@ -281,21 +281,6 @@ export const DATA = {
           title: "GitHub",
           icon: <Icons.github className="h-4 w-4" />,
           href: "https://github.com/Sajjadalgburi/Cool-Games",
-        },
-      ],
-    },
-    {
-      title: "Social Network API",
-      dates: "November 2018",
-      location: "Toronto, Ontario",
-      description:
-        "A Node.js and Express backend for a social network, supporting authentication, posts, and comments.",
-      image: "/network.jpg",
-      links: [
-        {
-          title: "GitHub",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/Sajjadalgburi/Social-Network-API",
         },
       ],
     },
@@ -326,6 +311,21 @@ export const DATA = {
           title: "GitHub",
           icon: <Icons.github className="h-4 w-4" />,
           href: "https://github.com/Sajjadalgburi/E-commerce-Back-End",
+        },
+      ],
+    },
+    {
+      title: "Social Network API",
+      dates: "November 2018",
+      location: "Toronto, Ontario",
+      description:
+        "A Node.js and Express backend for a social network, supporting authentication, posts, and comments.",
+      image: "/network.jpg",
+      links: [
+        {
+          title: "GitHub",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/Sajjadalgburi/Social-Network-API",
         },
       ],
     },
