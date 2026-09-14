@@ -9,11 +9,41 @@ export const DATA = {
   url: "https://sajjadalgburi.dev",
   location: "Toronto, ON",
   locationLink: "https://www.google.com/maps/place/toronto",
+  role: "Full-stack Software Engineer",
   description:
     "Full Stack Engineer passionate about building impactful products and empowering others. Experienced in modern web technologies and AI integration.",
   summary:
     "After enrolling in a coding bootcamp in 2023, I connected with talented peers and built a range of exciting projects. My journey has been driven by curiosity, collaboration, and a desire to solve real-world challenges with technology.",
   avatarUrl: "/me-2.png",
+  seo: {
+    locale: "en_CA",
+    twitterHandle: "@Sajjadalgburi",
+    keywords: [
+      "Full-stack software engineer",
+      "Full-stack developer",
+      "Software engineer Toronto",
+      "AI engineer",
+      "AI application developer",
+      "Next.js developer",
+      "React developer",
+      "TypeScript developer",
+      "Python developer",
+      "Web developer",
+      "Freelance developer",
+    ],
+    knowsAbout: [
+      "Artificial intelligence",
+      "Full-stack web development",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "Node.js",
+      "SQL",
+      "Tailwind CSS",
+    ],
+  },
 
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
