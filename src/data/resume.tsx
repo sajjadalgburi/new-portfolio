@@ -240,21 +240,6 @@ export const DATA = {
       ],
     },
     {
-      title: "Promptopia",
-      dates: "July - August 2024",
-      location: "Toronto, Ontario",
-      description:
-        "A platform for discovering and sharing AI prompts, built with Next.js, TypeScript, MongoDB, and serverless functions.",
-      image: "/promptopia.svg",
-      links: [
-        {
-          title: "GitHub",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/Sajjadalgburi/promptopia",
-        },
-      ],
-    },
-    {
       title: "Code Threads",
       dates: "September 2024",
       location: "Remote",
@@ -266,6 +251,21 @@ export const DATA = {
           title: "GitHub",
           icon: <Icons.github className="h-4 w-4" />,
           href: "https://github.com/Sajjadalgburi/code_threads",
+        },
+      ],
+    },
+    {
+      title: "Promptopia",
+      dates: "July - August 2024",
+      location: "Toronto, Ontario",
+      description:
+        "A platform for discovering and sharing AI prompts, built with Next.js, TypeScript, MongoDB, and serverless functions.",
+      image: "/promptopia.svg",
+      links: [
+        {
+          title: "GitHub",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/Sajjadalgburi/promptopia",
         },
       ],
     },
@@ -286,7 +286,7 @@ export const DATA = {
     },
     {
       title: "Social Network API",
-      dates: "November 2018",
+      dates: "March - June 2024",
       location: "Toronto, Ontario",
       description:
         "A Node.js and Express backend for a social network, supporting authentication, posts, and comments.",
