@@ -5,6 +5,7 @@ import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useMemo } from "react";
 
 interface BlurFadeTextProps {
+  as?: "div" | "h1";
   text: string;
   className?: string;
   variant?: {
@@ -18,6 +19,7 @@ interface BlurFadeTextProps {
   animateByCharacter?: boolean;
 }
 const BlurFadeText = ({
+  as: Tag = "div",
   text,
   className,
   variant,
@@ -35,7 +37,7 @@ const BlurFadeText = ({
 
   if (animateByCharacter) {
     return (
-      <div className="flex">
+      <Tag className="flex">
         <AnimatePresence>
           {characters.map((char, i) => (
             <motion.span
@@ -45,7 +47,6 @@ const BlurFadeText = ({
               exit="hidden"
               variants={combinedVariants}
               transition={{
-                yoyo: Infinity,
                 delay: delay + i * characterDelay,
                 ease: "easeOut",
               }}
@@ -56,12 +57,12 @@ const BlurFadeText = ({
             </motion.span>
           ))}
         </AnimatePresence>
-      </div>
+      </Tag>
     );
   }
 
   return (
-    <div className="flex">
+    <Tag className="flex">
       <AnimatePresence>
         <motion.span
           initial="hidden"
@@ -69,7 +70,6 @@ const BlurFadeText = ({
           exit="hidden"
           variants={combinedVariants}
           transition={{
-            yoyo: Infinity,
             delay,
             ease: "easeOut",
           }}
@@ -78,7 +78,7 @@ const BlurFadeText = ({
           {text}
         </motion.span>
       </AnimatePresence>
-    </div>
+    </Tag>
   );
 };
 

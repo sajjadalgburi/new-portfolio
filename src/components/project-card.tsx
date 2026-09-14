@@ -40,35 +40,58 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
-  return (
-    <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }>
-      <Link
-        target="_blank"
-        href={href || "#"}
-        className={cn("block cursor-pointer", className)}>
-        {video && (
-          <video
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+  const media = (
+    <>
+      {video && (
+        <video
+          src={video}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
+        />
+      )}
+      {image && (
+        <div className="relative h-48 w-full overflow-hidden bg-muted">
+          <Image
+            src={image}
+            alt=""
+            fill
+            aria-hidden
+            sizes="(max-width: 640px) 350px, 400px"
+            className="scale-110 object-cover blur-2xl opacity-45"
           />
-        )}
-        {image && (
+          <div className="absolute inset-0 bg-background/10" />
           <Image
             src={image}
             alt={title}
             width={500}
             height={300}
-            className=" h-48 w-full overflow-hidden object-cover"
+            className="relative h-full w-full object-contain"
           />
-        )}
-      </Link>
+        </div>
+      )}
+    </>
+  );
+
+  return (
+    <Card
+      className={
+        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
+      }
+    >
+      {href ? (
+        <Link
+          target="_blank"
+          href={href}
+          className={cn("block cursor-pointer", className)}
+        >
+          {media}
+        </Link>
+      ) : (
+        <div className={className}>{media}</div>
+      )}
       <CardHeader className="px-2">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
@@ -89,7 +112,8 @@ export function ProjectCard({
               <Badge
                 className="px-1 py-0 text-[10px]"
                 variant="secondary"
-                key={tag}>
+                key={tag}
+              >
                 {tag}
               </Badge>
             ))}
