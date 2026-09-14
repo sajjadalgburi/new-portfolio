@@ -6,9 +6,10 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { TechStack } from "@/components/TechStack";
 import { Testemonials } from "@/components/Testemonials";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import { profileJsonLd } from "@/lib/seo";
+import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -25,8 +26,15 @@ export default function Page() {
               delay={BLUR_FADE_DELAY}
               className="float-right ml-3 sm:order-2 sm:float-none sm:ml-0"
             >
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+              <Avatar className="relative size-28 border">
+                <Image
+                  src={DATA.avatarUrl}
+                  alt={DATA.name}
+                  fill
+                  priority
+                  sizes="112px"
+                  className="object-cover"
+                />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
@@ -38,13 +46,8 @@ export default function Page() {
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
-              <BlurFade
-                delay={BLUR_FADE_DELAY}
-                yOffset={8}
-              >
-                <p className="max-w-[600px] md:text-xl">
-                  {DATA.description}
-                </p>
+              <BlurFade delay={BLUR_FADE_DELAY} yOffset={8}>
+                <p className="max-w-[600px] md:text-xl">{DATA.description}</p>
               </BlurFade>
             </div>
           </div>
@@ -197,13 +200,11 @@ export default function Page() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.more_projects.map((project, id) => (
-                <BlurFade
+              {DATA.more_projects.map((project) => (
+                <HackathonCard
                   key={`${project.title}-${project.dates}`}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-                >
-                  <HackathonCard {...project} />
-                </BlurFade>
+                  {...project}
+                />
               ))}
             </ul>
           </BlurFade>
@@ -224,7 +225,7 @@ export default function Page() {
                 <Link
                   target="_blank"
                   href={DATA.contact.social.LinkedIn.url}
-                  className="text-blue-500 hover:underline"
+                  className="text-blue-700 underline hover:no-underline dark:text-blue-400"
                 >
                   with a direct question on linkedIn
                 </Link>{" "}

@@ -33,14 +33,12 @@ export const metadata: Metadata = {
     firstName: DATA.name.split(" ")[0],
     lastName: DATA.name.split(" ").at(-1),
     username: DATA.name,
-    images: [{ url: avatarUrl, alt: DATA.name }],
   },
   twitter: {
     card: "summary",
     title: siteName,
     description: DATA.description,
     creator: DATA.seo.twitterHandle,
-    images: [avatarUrl],
   },
   robots: {
     index: true,

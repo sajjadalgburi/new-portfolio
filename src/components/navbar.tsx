@@ -30,7 +30,10 @@ export default function Navbar() {
   }
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
+    <nav
+      aria-label="Primary navigation"
+      className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14"
+    >
       <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
       <Dock className="z-50 pointer-events-auto relative mx-auto flex min-h-full h-full items-center border-neutral-200 bg-white/95 px-1 text-neutral-900 shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] backdrop-blur-md transform-gpu dark:border-white/15 dark:bg-neutral-950/95 dark:text-neutral-100 dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]">
         {DATA.navbar.map((item) => (
@@ -39,6 +42,7 @@ export default function Navbar() {
               <TooltipTrigger asChild>
                 <Link
                   href={item.href}
+                  aria-label={item.label}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-12 text-neutral-900 dark:text-neutral-100",
@@ -97,6 +101,6 @@ export default function Navbar() {
           </Tooltip>
         </DockIcon>
       </Dock>
-    </div>
+    </nav>
   );
 }

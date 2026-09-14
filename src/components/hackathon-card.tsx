@@ -35,14 +35,14 @@ export function HackathonCard({
         {dates && (
           <time className="text-xs text-muted-foreground">{dates}</time>
         )}
-        <h2 className="font-semibold leading-none">{title}</h2>
+        <h3 className="font-semibold leading-none">{title}</h3>
         {location && (
           <p className="text-sm text-muted-foreground">{location}</p>
         )}
         {description && (
-          <span className="prose dark:prose-invert text-sm text-muted-foreground">
+          <p className="prose dark:prose-invert text-sm text-muted-foreground">
             {description}
-          </span>
+          </p>
         )}
       </div>
       {links && links.length > 0 && (
