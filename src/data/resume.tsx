@@ -161,15 +161,27 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Outreach AI",
+      title: "Webgen",
       href: undefined,
-      dates: "2025",
+      dates: "2026",
       active: true,
       description:
-        "An AI-powered SaaS product that generates personalized outreach messages from job descriptions and résumé context. I implemented authentication, credit-based usage, and server-side validation, then improved output quality through prompt engineering, résumé analysis, and structured job-description parsing.",
-      technologies: ["Next.js", "TypeScript", "Supabase", "OpenAI", "Stripe"],
-      links: [],
-      image: "/outreach-ai.png",
+        "A collaborative AI website builder for small businesses. It turns public business details or manual input into editable static websites, with a visual editor and Cloudflare Pages deployment.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Convex",
+        "Tailwind CSS",
+        "Cloudflare Pages",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/IbrahimD0/webgen",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/webgen-editor.png",
       video: "",
     },
     {
@@ -193,18 +205,6 @@ export const DATA = {
         },
       ],
       image: "/interview-pal.png",
-      video: "",
-    },
-    {
-      title: "Jobshot Manager",
-      href: undefined,
-      dates: "2025",
-      active: true,
-      description:
-        "A contractor job-tracking application with secure image uploads, draft workflows, and project categorization. I implemented Supabase Row Level Security policies and storage structure for per-user data isolation and performance, and collaborated on monetization strategy and product scope.",
-      technologies: ["Next.js", "TypeScript", "Supabase"],
-      links: [],
-      image: "/boost.jpg",
       video: "",
     },
   ],
