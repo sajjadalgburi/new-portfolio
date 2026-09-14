@@ -40,8 +40,8 @@ export default function RootLayout({
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
-        {process.env.VERCEL === "1" ? <Analytics /> : null}
-        {process.env.VERCEL === "1" ? <SpeedInsights /> : null}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -175,7 +175,7 @@ export const DATA = {
         "Cloudflare Pages",
       ],
       links: [],
-      image: "/webgen-editor.png",
+      image: "/webgen-ai-builder.png",
       video: "",
     },
     {
