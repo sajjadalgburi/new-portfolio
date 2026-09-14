@@ -75,7 +75,8 @@ const ReviewCard = ({
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}>
+      )}
+    >
       <div className="flex flex-row items-center gap-2">
         <img className="rounded-full" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
@@ -96,12 +97,12 @@ export function Testemonials() {
       <div className="hidden sm:flex absolute inset-0 z-10 items-center justify-center">
         <Marquee pauseOnHover vertical className="[--duration:20s]">
           {firstRow.map((review) => (
-            <ReviewCard key={review.username} link={review.link} {...review} />
+            <ReviewCard key={review.name} link={review.link} {...review} />
           ))}
         </Marquee>
         <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
           {secondRow.map((review) => (
-            <ReviewCard key={review.username} link={review.link} {...review} />
+            <ReviewCard key={review.name} link={review.link} {...review} />
           ))}
         </Marquee>
         <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background"></div>
@@ -111,7 +112,7 @@ export function Testemonials() {
       <div className="flex sm:hidden absolute inset-0 z-10 items-center justify-center">
         <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
           {reviews.map((review) => (
-            <ReviewCard key={review.username} link={review.link} {...review} />
+            <ReviewCard key={review.name} link={review.link} {...review} />
           ))}
         </Marquee>
 
