@@ -62,23 +62,17 @@ const ReviewCard = ({
   body: string;
   link?: string; // Optional link to LinkedIn profile
 }) => {
-  return (
-    <Link
-      target={
-        link ? "_blank" : "_self" // Open link in a new tab if provided, otherwise stay on the same page
-      } // Open link in a new tab
-      rel="noopener noreferrer" // Security best practice
-      href={link || "#"} // Use the provided link or fallback to "#"
-      className={cn(
-        "relative h-full w-full cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}
-    >
+  const content = (
+    <>
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img
+          className="rounded-full"
+          width="32"
+          height="32"
+          alt=""
+          src={img}
+          loading="lazy"
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -87,7 +81,26 @@ const ReviewCard = ({
         </div>
       </div>
       <blockquote className="mt-2 text-sm">{body}</blockquote>
+    </>
+  );
+
+  const className = cn(
+    "relative h-full w-full overflow-hidden rounded-xl border p-4",
+    "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+    "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+  );
+
+  return link ? (
+    <Link
+      target="_blank"
+      rel="noopener noreferrer"
+      href={link}
+      className={cn("cursor-pointer", className)}
+    >
+      {content}
     </Link>
+  ) : (
+    <article className={className}>{content}</article>
   );
 };
 

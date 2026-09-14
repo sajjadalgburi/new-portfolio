@@ -1,0 +1,14 @@
+# Sajjad Algburi
+
+> Personal portfolio for Sajjad Algburi, a Toronto-based full-stack software engineer building AI-powered web applications with Next.js, React, TypeScript, Python, and FastAPI.
+
+## Portfolio
+
+- [Home](https://sajjadalgburi.dev/): Professional profile, work history, skills, selected projects, certifications, and testimonials.
+- [Resume](https://sajjadalgburi.dev/resume.pdf): Downloadable résumé.
+
+## Contact
+
+- [GitHub](https://github.com/Sajjadalgburi)
+- [LinkedIn](https://www.linkedin.com/in/sajjadalgburi/)
+- [Email](mailto:sajjadalgburi.dev@gmail.com)
