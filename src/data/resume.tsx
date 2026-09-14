@@ -174,13 +174,7 @@ export const DATA = {
         "Tailwind CSS",
         "Cloudflare Pages",
       ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/IbrahimD0/webgen",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
+      links: [],
       image: "/webgen-editor.png",
       video: "",
     },
