@@ -7,11 +7,41 @@ export const DATA = {
   url: "https://sajjadalgburi.dev",
   location: "Toronto, Ontario",
   locationLink: "https://www.google.com/maps/place/toronto",
+  role: "Full-stack Software Engineer",
   description:
     "Product-focused full-stack software engineer building fast, reliable AI web applications with Next.js, React, TypeScript, and Python/FastAPI.",
   summary:
     "Software Engineer experienced in building AI-powered products and full-stack web applications. At Magic Hour AI, I build production features for creator tools used by more than 5 million people worldwide. Previously, I shipped client websites and internal tools as a freelance developer. I enjoy turning ambitious product ideas into reliable, thoughtful experiences.",
   avatarUrl: "/me-2.png",
+  seo: {
+    locale: "en_CA",
+    twitterHandle: "@Sajjadalgburi",
+    keywords: [
+      "Full-stack software engineer",
+      "Full-stack developer",
+      "Software engineer Toronto",
+      "AI engineer",
+      "AI application developer",
+      "Next.js developer",
+      "React developer",
+      "TypeScript developer",
+      "Python developer",
+      "Web developer",
+      "Freelance developer",
+    ],
+    knowsAbout: [
+      "Artificial intelligence",
+      "Full-stack web development",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "Node.js",
+      "SQL",
+      "Tailwind CSS",
+    ],
+  },
 
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
