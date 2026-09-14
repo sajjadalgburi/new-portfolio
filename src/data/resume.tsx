@@ -316,7 +316,7 @@ export const DATA = {
     },
     {
       title: "Social Network API",
-      dates: "November 2018",
+      dates: "March - June 2024",
       location: "Toronto, Ontario",
       description:
         "A Node.js and Express backend for a social network, supporting authentication, posts, and comments.",
