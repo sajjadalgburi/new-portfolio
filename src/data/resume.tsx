@@ -185,6 +185,18 @@ export const DATA = {
       video: "",
     },
     {
+      title: "Outreach AI",
+      href: undefined,
+      dates: "2025",
+      active: true,
+      description:
+        "An AI-powered SaaS product that generates personalized outreach messages from job descriptions and résumé context. I implemented authentication, credit-based usage, and server-side validation, then improved output quality through prompt engineering, résumé analysis, and structured job-description parsing.",
+      technologies: ["Next.js", "TypeScript", "Supabase", "OpenAI", "Stripe"],
+      links: [],
+      image: "/outreach-ai.png",
+      video: "",
+    },
+    {
       title: "Interview Pal",
       href: "https://interview-pal-flame.vercel.app",
       dates: "2025",
