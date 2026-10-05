@@ -1,7 +1,6 @@
 import { HackathonCard } from "@/components/hackathon-card";
 import { JsonLd } from "@/components/json-ld";
 import BlurFade from "@/components/magicui/blur-fade";
-import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { TechStack } from "@/components/TechStack";
@@ -22,33 +21,28 @@ export default function Page() {
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 sm:flex sm:justify-between">
-            <BlurFade
-              delay={BLUR_FADE_DELAY}
-              className="float-right ml-3 sm:order-2 sm:float-none sm:ml-0"
-            >
+            <div className="float-right ml-3 -translate-y-1.5 sm:order-2 sm:float-none sm:ml-0">
               <Avatar className="relative size-28 border">
                 <Image
                   src={DATA.avatarUrl}
                   alt={DATA.name}
                   fill
-                  priority
+                  preload
+                  fetchPriority="high"
                   sizes="112px"
                   className="object-cover"
                 />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
-            </BlurFade>
+            </div>
             <div className="space-y-1.5 sm:order-1 sm:flex sm:flex-1 sm:flex-col">
-              <BlurFadeText
-                as="h1"
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
-              />
-              <BlurFade delay={BLUR_FADE_DELAY} yOffset={8}>
+              <h1 className="-translate-y-2 text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                Hi, I&apos;m {DATA.name.split(" ")[0]}
+                <span className="hidden sm:inline"> 👋</span>
+              </h1>
+              <div className="-translate-y-2">
                 <p className="max-w-[600px] md:text-xl">{DATA.description}</p>
-              </BlurFade>
+              </div>
             </div>
           </div>
         </div>
@@ -74,6 +68,7 @@ export default function Page() {
               delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
+                preload={id === 0}
                 logoUrl={work.logoUrl}
                 altText={work.company}
                 title={work.company}

@@ -123,7 +123,7 @@ export function Testemonials() {
       </div>
 
       <div className="flex sm:hidden absolute inset-0 z-10 items-center justify-center">
-        <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
+        <Marquee pauseOnHover vertical className="[--duration:20s]">
           {reviews.map((review) => (
             <ReviewCard key={review.name} link={review.link} {...review} />
           ))}
