@@ -1,6 +1,7 @@
 "use client";
 
 import { Dock, DockIcon } from "@/components/magicui/dock";
+import { EmailContact } from "@/components/email-contact";
 import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -67,18 +68,22 @@ export default function Navbar() {
             <DockIcon key={name}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={name}
-                    href={social.url}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 text-neutral-900 dark:text-neutral-100",
-                    )}
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
+                  {name === "Email" ? (
+                    <EmailContact />
+                  ) : (
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={name}
+                      href={social.url}
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon" }),
+                        "size-12 text-neutral-900 dark:text-neutral-100",
+                      )}
+                    >
+                      <social.icon className="size-4" />
+                    </Link>
+                  )}
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{name}</p>
