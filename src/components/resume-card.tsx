@@ -18,7 +18,7 @@ interface ResumeCardProps {
   href?: string;
   badges?: readonly string[];
   period: string;
-  description?: string;
+  description?: string | readonly string[];
   preload?: boolean;
 }
 export const ResumeCard = ({
@@ -119,7 +119,15 @@ export const ResumeCard = ({
             }}
             className="mt-2 overflow-hidden text-xs sm:text-sm"
           >
-            {description}
+            {typeof description === "string" ? (
+              description
+            ) : (
+              <ul className="list-disc space-y-2 pl-5">
+                {description.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            )}
           </motion.div>
         )}
       </div>
