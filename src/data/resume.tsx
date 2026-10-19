@@ -7,17 +7,17 @@ export const DATA = {
   url: "https://sajjadalgburi.dev",
   location: "Toronto, Ontario",
   locationLink: "https://www.google.com/maps/place/toronto",
-  role: "Full-stack Software Engineer",
+  role: "Full-Stack Engineer",
   description:
-    "Product-focused full-stack software engineer building fast, reliable AI web applications with Next.js, React, TypeScript, and Python/FastAPI.",
+    "Full-stack engineer building AI-powered web products with TypeScript, React, and Next.js, spanning user interfaces, backend APIs, model integrations, and billing.",
   summary:
-    "Software Engineer experienced in building AI-powered products and full-stack web applications. At Magic Hour AI, I build production features for creator tools used by more than 5 million people worldwide. Previously, I shipped client websites and internal tools as a freelance developer. I enjoy turning ambitious product ideas into reliable, thoughtful experiences.",
+    "Full-stack engineer building AI-powered web products with TypeScript, React, and Next.js, spanning user interfaces, backend APIs, model integrations, and billing.",
   avatarUrl: "/me-2.png",
   seo: {
     locale: "en_CA",
     twitterHandle: "@Sajjadalgburi",
     keywords: [
-      "Full-stack software engineer",
+      "Full-Stack Engineer",
       "Full-stack developer",
       "Software engineer Toronto",
       "AI engineer",
@@ -43,6 +43,43 @@ export const DATA = {
     ],
   },
 
+  skills: [
+    {
+      category: "Languages",
+      items: ["TypeScript", "JavaScript", "Python"],
+    },
+    {
+      category: "Frontend",
+      items: ["React", "Next.js", "TailwindCSS"],
+    },
+    {
+      category: "Backend & Data",
+      items: [
+        "Node.js",
+        "FastAPI",
+        "Express",
+        "Prisma",
+        "SQL",
+        "MongoDB",
+        "Supabase",
+        "Firebase",
+      ],
+    },
+    {
+      category: "APIs & AI",
+      items: [
+        "REST APIs",
+        "GraphQL",
+        "WebSockets",
+        "oRPC",
+        "AI/LLM Integrations",
+      ],
+    },
+    {
+      category: "Testing, Cloud & Tools",
+      items: ["Vitest", "Jest", "Docker", "GCP", "Git"],
+    },
+  ],
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
     email: "sajjadalgburi.dev@gmail.com",
@@ -76,46 +113,57 @@ export const DATA = {
   },
   work: [
     {
-      company: "Magic Hour",
+      company: "Magic Hour AI",
       href: "https://www.magichour.ai/",
       badges: [],
       location: "San Francisco Bay Area · Remote",
-      title: "Software Engineer",
+      title: "Full-Stack Engineer",
       logoUrl: "/work/magichour1_logo.jpeg",
       start: "Nov 2025",
       end: "Present",
-      description:
-        "Building and scaling production features for Magic Hour, an AI video and image platform used by more than 5 million people worldwide. I contribute to creator workflows across text-to-video, image-to-video, face swap, AI image generation, and video editing using Next.js, React, TypeScript, Prisma, SQL, and Tailwind CSS.",
+      description: [
+        "Built responsive React and Next.js interfaces for media creation and discovery, including reusable forms, interactive editors, upload workflows, and draft recovery.",
+        "Developed TypeScript backend APIs and authenticated server actions with shared validation, asset ownership checks, project creation, and credit-based billing; integrated pricing and Stripe checkout flows.",
+        "Integrated generative image and video models into web and public API workflows, connecting model configuration, generation requests, worker dispatch, and multi-step creation flows.",
+        "Improved workflow reliability through state restoration, server-side pricing enforcement, and regression tests covering authentication, validation, billing, and failure recovery.",
+      ],
     },
     {
-      company: "Magic Hour",
+      company: "Magic Hour AI",
       href: "https://www.magichour.ai/",
       badges: [],
       location: "Remote",
-      title: "Software Engineer Intern",
+      title: "Prototyping Intern",
       logoUrl: "/work/magichour1_logo.jpeg",
       start: "Jun 2025",
       end: "Nov 2025",
-      description: "Intern @ Magic Hour.",
+      description: [
+        "Prototyped AI image/video workflows with Python, ComfyUI, and GPU-backed Jupyter/Colab; partnered with the CEO to compare Wan 2.2, Qwen Image Edit, and InfiniteTalk for speed, quality, and product fit.",
+        "Built a stock-footage and text-to-speech video-generator prototype, refining clip-selection prompts, provider fallbacks, and video post-processing.",
+        "Automated workflows with Python and n8n, exported ComfyUI generations to Google Sheets for review, and packaged experiments as Colab notebooks and Python CLI tools.",
+      ],
     },
     {
-      company: "Upwork Freelancer",
+      company: "Upwork",
       href: "https://www.upwork.com/",
       badges: [],
       location: "Remote",
-      title: "Frontend Engineer",
+      title: "Freelance Frontend / Full-Stack Developer",
       logoUrl: "/work/upwork_logo.jpeg",
       start: "Dec 2023",
       end: "Aug 2024",
-      description:
-        "Built and deployed responsive client websites and internal tools using React, Next.js, TypeScript, and Tailwind CSS. As part of my Upwork work, I built the Juice.gg Admin Case Builder: an internal AI-powered case-generation platform with admin workflows, CRUD functionality, generation history, SEO improvements, analytics, and business-focused integrations.",
+      description: [
+        "Delivered 6 client web products with responsive React, Next.js, TypeScript, and TailwindCSS interfaces and backend integrations, completing accepted paid milestones.",
+        "Saved $15K+ in design and operations costs for Juice.gg by building an internal AI platform for prompt-based website case creation.",
+        "Reduced admin content update time by 70% with role-based access, CRUD workflows, structured generation history, analytics, and SEO updates.",
+      ],
     },
   ],
   education: [
     {
       school: "University of Toronto",
       href: "https://www.utoronto.ca/",
-      degree: "Certificate, Full Stack Engineer",
+      degree: "Full Stack Engineer Certificate — UofT SCS Coding Boot Camp",
       logoUrl: "/education/university_of_toronto_logo.jpeg",
       start: "Nov 2023",
       end: "May 2024",
@@ -154,8 +202,8 @@ export const DATA = {
       dates: "2026",
       active: true,
       description:
-        "A featured Upwork client project: an internal AI-powered case-generation platform that dynamically creates website cases through prompt-based generation. I implemented role-based admin access, full CRUD operations, and versioned image editing to preserve earlier generations. The product delivered more than 10x ROI by reducing design dependency and operational costs.",
-      technologies: ["MongoDB", "TypeScript", "Next.js", "Google Cloud"],
+        "Built an AI case-generation admin tool with prompt-based generation, CRUD workflows, and versioned image history; delivered 15x ROI to date based on client-reported cost savings.",
+      technologies: ["Next.js", "TypeScript", "Gemini", "Nano Banana Pro"],
       links: [],
       image: "/crown_jewel.png",
       video: "",
@@ -184,7 +232,7 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "An AI-powered SaaS product that generates personalized outreach messages from job descriptions and résumé context. I implemented authentication, credit-based usage, and server-side validation, then improved output quality through prompt engineering, résumé analysis, and structured job-description parsing.",
+        "Built an AI outreach SaaS workflow with resume and job-description parsing, OpenAI generation, Supabase authentication, Stripe credits, and server-side validation.",
       technologies: ["Next.js", "TypeScript", "Supabase", "OpenAI", "Stripe"],
       links: [],
       image: "/outreach-ai.png",
@@ -196,8 +244,8 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "An AI-powered mock-interview platform with real-time voice. I built the full user flow for dynamic interview questions and automated feedback, including authentication and session storage.",
-      technologies: ["Next.js", "TypeScript", "Firebase", "Gemini", "Vapi"],
+        "Built a real-time AI mock interview app with Vapi voice calls, Gemini feedback, Firebase authentication, and persisted interview sessions.",
+      technologies: ["Next.js", "TypeScript", "Firebase", "Vapi", "Gemini"],
       links: [
         {
           type: "Website",
@@ -209,6 +257,11 @@ export const DATA = {
           href: "https://github.com/Sajjadalgburi/interview_pal",
           icon: <Icons.github className="size-3" />,
         },
+        {
+          type: "Demo",
+          href: "https://drive.google.com/file/d/1szn73VL_cuMHY3MirBCbhMf3JufhJhfg/view?usp=sharing",
+          icon: <Icons.globe className="size-3" />,
+        },
       ],
       image: "/interview-pal.png",
       video: "",
@@ -216,11 +269,11 @@ export const DATA = {
   ],
   more_projects: [
     {
-      title: "Job Shot",
+      title: "Jobshot Manager",
       dates: "May 2025",
       location: "Calgary, Alberta",
       description:
-        "A full-stack application for contractors to find jobs and manage their profiles, built with Next.js, TypeScript, and Supabase.",
+        "Built a contractor job tracking app with image uploads, draft review, project categorization, Supabase storage, and row-level security policies.",
       image: "/job-shot.png",
       links: [],
     },
