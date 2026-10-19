@@ -122,10 +122,10 @@ export const DATA = {
       start: "Nov 2025",
       end: "Present",
       description: [
-        "Built responsive React and Next.js interfaces for media creation and discovery, including reusable forms, interactive editors, upload workflows, and draft recovery.",
-        "Developed TypeScript backend APIs and authenticated server actions with shared validation, asset ownership checks, project creation, and credit-based billing; integrated pricing and Stripe checkout flows.",
-        "Integrated generative image and video models into web and public API workflows, connecting model configuration, generation requests, worker dispatch, and multi-step creation flows.",
-        "Improved workflow reliability through state restoration, server-side pricing enforcement, and regression tests covering authentication, validation, billing, and failure recovery.",
+        "Built React and Next.js creation workflows, including a v2 redesign; video-attempt rates among tracked accounts were 27.9% higher in the third month after launch than at baseline.",
+        "Developed TypeScript APIs and authenticated server actions for media workflows and billing, connecting API cost estimates to signup, Stripe checkout, and subscription management.",
+        "Integrated generative image and video models into web and public API workflows, enabling multi-image creation and carrying selected outputs and prompts into video generation.",
+        "Restored saved inputs and settings across failed or canceled image, video, and audio projects, enabling retries and eligible older-project reuse while preserving expired-media safeguards.",
       ],
     },
     {
@@ -140,7 +140,7 @@ export const DATA = {
       description: [
         "Prototyped AI image/video workflows with Python, ComfyUI, and GPU-backed Jupyter/Colab; partnered with the CEO to compare Wan 2.2, Qwen Image Edit, and InfiniteTalk for speed, quality, and product fit.",
         "Built a stock-footage and text-to-speech video-generator prototype, refining clip-selection prompts, provider fallbacks, and video post-processing.",
-        "Automated workflows with Python and n8n, exported ComfyUI generations to Google Sheets for review, and packaged experiments as Colab notebooks and Python CLI tools.",
+        "Packaged AI experiments as runnable Colab notebooks and Python CLI tools; automated Python and n8n workflows and exported ComfyUI generations to Google Sheets for review.",
       ],
     },
     {
@@ -153,9 +153,9 @@ export const DATA = {
       start: "Dec 2023",
       end: "Aug 2024",
       description: [
-        "Delivered 6 client web products with responsive React, Next.js, TypeScript, and TailwindCSS interfaces and backend integrations, completing accepted paid milestones.",
+        "Delivered 4 client web projects with responsive React, Next.js, TypeScript, and TailwindCSS interfaces and backend integrations, completing accepted paid milestones.",
         "Saved $15K+ in design and operations costs for Juice.gg by building an internal AI platform for prompt-based website case creation.",
-        "Reduced admin content update time by 70% with role-based access, CRUD workflows, structured generation history, analytics, and SEO updates.",
+        "Reduced admin content update time by 70% with role-based access, CRUD workflows, and structured generation history.",
       ],
     },
   ],
@@ -197,18 +197,6 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Juice.gg Admin Case Builder",
-      href: undefined,
-      dates: "2026",
-      active: true,
-      description:
-        "Built an AI case-generation admin tool with prompt-based generation, CRUD workflows, and versioned image history; delivered 15x ROI to date based on client-reported cost savings.",
-      technologies: ["Next.js", "TypeScript", "Gemini", "Nano Banana Pro"],
-      links: [],
-      image: "/crown_jewel.png",
-      video: "",
-    },
-    {
       title: "Webgen",
       href: undefined,
       dates: "2026",
@@ -232,7 +220,7 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "Built an AI outreach SaaS workflow with resume and job-description parsing, OpenAI generation, Supabase authentication, Stripe credits, and server-side validation.",
+        "Built an AI outreach SaaS that turns resume and job-description context into personalized messages, with Supabase authentication, Stripe credits, and server-side validation.",
       technologies: ["Next.js", "TypeScript", "Supabase", "OpenAI", "Stripe"],
       links: [],
       image: "/outreach-ai.png",
@@ -244,7 +232,7 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "Built a real-time AI mock interview app with Vapi voice calls, Gemini feedback, Firebase authentication, and persisted interview sessions.",
+        "Built a real-time AI mock interview app that pairs Vapi voice practice with Gemini feedback and saves interview sessions using Firebase authentication and storage.",
       technologies: ["Next.js", "TypeScript", "Firebase", "Vapi", "Gemini"],
       links: [
         {
@@ -273,7 +261,7 @@ export const DATA = {
       dates: "May 2025",
       location: "Calgary, Alberta",
       description:
-        "Built a contractor job tracking app with image uploads, draft review, project categorization, Supabase storage, and row-level security policies.",
+        "Built a contractor job tracking app for uploading job photos, reviewing drafts, and organizing projects, with Supabase storage and row-level access policies.",
       image: "/job-shot.png",
       links: [],
     },
