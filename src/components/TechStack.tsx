@@ -1,21 +1,50 @@
+import { IconCloud } from "@/components/magicui/icon-cloud";
 import { DATA } from "@/data/resume";
-import { Badge } from "@/components/ui/badge";
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "python",
+  "react",
+  "nextdotjs",
+  "tailwindcss",
+  "nodedotjs",
+  "fastapi",
+  "express",
+  "prisma",
+  "postgresql",
+  "mongodb",
+  "supabase",
+  "firebase",
+  "graphql",
+  "vitest",
+  "jest",
+  "docker",
+  "googlecloud",
+  "git",
+];
 
 export function TechStack() {
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+  );
+
   return (
-    <dl className="mt-3 space-y-4">
-      {DATA.skills.map(({ category, items }) => (
-        <div key={category}>
-          <dt className="mb-2 text-sm font-medium">{category}</dt>
-          <dd className="flex flex-wrap gap-1.5">
-            {items.map((skill) => (
-              <Badge key={skill} variant="secondary">
-                {skill}
-              </Badge>
-            ))}
-          </dd>
-        </div>
-      ))}
-    </dl>
+    <>
+      <div
+        aria-hidden="true"
+        className="relative flex size-full items-center justify-center overflow-hidden"
+      >
+        <IconCloud images={images} />
+      </div>
+      <dl className="sr-only">
+        {DATA.skills.map(({ category, items }) => (
+          <div key={category}>
+            <dt>{category}</dt>
+            <dd>{items.join(", ")}</dd>
+          </div>
+        ))}
+      </dl>
+    </>
   );
 }
