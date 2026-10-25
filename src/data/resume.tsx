@@ -254,6 +254,25 @@ export const DATA = {
       image: "/interview-pal.png",
       video: "",
     },
+    {
+      title: "Recall Sprint",
+      href: undefined,
+      dates: "2026",
+      active: false,
+      description:
+        "A focused learning app for developers that turns software topics and notes into short AI-generated quizzes. Review saved scores and explanations, then retry only the questions you missed.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Supabase Auth / RLS",
+        "OpenRouter",
+        "Tailwind CSS",
+        "shadcn/ui",
+      ],
+      links: [],
+      image: "/recall-sprint.png",
+      video: "",
+    },
   ],
   more_projects: [
     {
