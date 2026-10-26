@@ -27,7 +27,7 @@ const reviews = [
   {
     name: "Habeed Shad",
     username: "@Freelance Client",
-    body: "I appreciate Sajjad Alguir's help and craftsmanship! With the help of his website, I was able to acquire additional customers, many of whom returned because of the custom booking platform he created for me, all at no extra cost!",
+    body: "I appreciate Sajjad's help and craftsmanship! With the help of his website, I was able to acquire additional customers, many of whom returned because of the custom booking platform he created for me, all at no extra cost!",
     img: "https://avatar.vercel.sh/john",
   },
   {
