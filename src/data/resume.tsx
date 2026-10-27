@@ -197,18 +197,18 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Webgen",
+      title: "WebGen",
       href: undefined,
       dates: "2026",
       active: true,
       description:
-        "A collaborative AI website builder for small businesses. It turns public business details or manual input into editable static websites, with a visual editor and Cloudflare Pages deployment.",
+        "Developed the interface for an AI business-website builder, adding responsive landing pages, loading/error states, and validated local-business structured data.",
       technologies: [
         "Next.js",
+        "React",
         "TypeScript",
         "Convex",
         "Tailwind CSS",
-        "Cloudflare Pages",
       ],
       links: [],
       image: "/webgen-ai-builder.png",
